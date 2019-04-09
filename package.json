@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "util": "^0.11.1"
   }
 }
