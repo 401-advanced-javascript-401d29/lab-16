@@ -15,12 +15,12 @@ const write = util.promisify(fs.writeFile);
  */
 const alterFile = (file) => {
   read(file)
-  .then(data => {
-    let text = Buffer.from(data.toString().toUpperCase());
-    return write(file, text);
-  })
-  .then(() => events.emit('saveComplete', file))
-  .catch(error => events.emit('eventError', error))
+    .then(data => {
+      let text = Buffer.from(data.toString().toUpperCase());
+      return write(file, text);
+    })
+    .then(() => events.emit('saveComplete', file))
+    .catch(error => events.emit('eventError', error));
 
 };
 
